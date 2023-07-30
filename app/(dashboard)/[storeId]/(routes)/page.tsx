@@ -17,10 +17,10 @@ interface DashboardPageProps {
 }
 
 const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
-  const totalRevenue = await getTotalRevenue(params.storeId);
-  const graphRevenue = await getGraphRevenue(params.storeId);
-  const salesCount = await getSalesCount(params.storeId);
-  const stockCount = await getStockCount(params.storeId);
+  // const totalRevenue = await getTotalRevenue(params.storeId);
+  // const graphRevenue = await getGraphRevenue(params.storeId);
+  // const salesCount = await getSalesCount(params.storeId);
+  // const stockCount = await getStockCount(params.storeId);
 
   return (
     <div className="flex-col">
@@ -37,7 +37,8 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {formatter.format(totalRevenue)}
+                50
+                {/* {formatter.format(totalRevenue)} */}
               </div>
             </CardContent>
           </Card>
@@ -47,7 +48,8 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
               <CreditCard className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">+{salesCount}</div>
+              {/* <div className="text-2xl font-bold">+{salesCount}</div> */}
+              <div className="text-2xl font-bold">20</div>
             </CardContent>
           </Card>
           <Card>
@@ -58,7 +60,8 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
               <Package className="h-4 w-4 text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stockCount}</div>
+              <div className="text-2xl font-bold">100</div>
+              {/* <div className="text-2xl font-bold">{stockCount}</div> */}
             </CardContent>
           </Card>
         </div>
@@ -67,7 +70,8 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
             <CardTitle>Overview</CardTitle>
           </CardHeader>
           <CardContent className="pl-2">
-            <Overview data={graphRevenue} />
+            {/* <Overview data={graphRevenue} /> */}
+            {/* <Overview data={graphRevenue} /> */}
           </CardContent>
         </Card>
       </div>
